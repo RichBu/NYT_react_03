@@ -11,13 +11,6 @@ module.exports = {
         res.json(data);
       };
     });
-
-
-    // db.articles.find
-    // db.Article
-    //   .find()
-    //   .then(dbModel => res.json(dbModel))
-    //   .catch(err => res.status(422).json(err))
   },
 
   // create: function(req,res){
@@ -50,9 +43,26 @@ module.exports = {
 
   remove: function (req, res) {
     console.log('delete route');
+
+    //var id = req.body.id;
+    var id = req.params.id;
+
+    db.articles.remove({
+      "_id": mongojs.ObjectID(id)
+    }, function (error, removed) {
+      if (error) {
+        res.send(error);
+      } else {
+        res.json(id);
+      }
+    });
+
+    /*
     db.Article
       .findbyId({ _id: req.params.id })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+      */
   }
+
 };

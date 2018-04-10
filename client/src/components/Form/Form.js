@@ -25,7 +25,7 @@ render() {
   return (
     <form>
       <div className="form-group">
-        <label for="topic">Topic</label>
+        <label >Topic</label>
         <input
           type="string" 
           className="form-control"  
@@ -35,7 +35,7 @@ render() {
         />
       </div>
       <div className="form-group">
-        <label for="start">Start Date</label>
+        <label >Start Date</label>
         <input
           type="date"
           className="form-control"
@@ -45,7 +45,7 @@ render() {
         />
       </div>
       <div className="form-group">
-        <label for="end">End Date</label>
+        <label >End Date</label>
         <input
           type="date"
           className="form-control"

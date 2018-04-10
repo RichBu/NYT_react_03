@@ -3,19 +3,21 @@ var morgan = require('morgan');
 
 const bodyParser = require("body-parser");
 //const mongoose = require("mongoose");
-const mongojs = require("mongojs");
-const routes = require("./routes");
-const app = express();
-const PORT = process.env.PORT || 3001;
+mongojs = require("mongojs");
+routes = require("./routes");
+app = express();
+PORT = process.env.PORT || 3001;
 
 
 // Configuring body parser for AJAX request
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 // Serving up static assets
+/*
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static("client/build"));
 };
+*/
 
 //allow the api to be accessed by other apps
 app.use(function(req, res, next) {

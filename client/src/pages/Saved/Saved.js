@@ -6,6 +6,7 @@ class Saved extends Component {
   state = {
     articles: []
   }
+  
   componentWillMount() {
     API.getSaved().then((savedArticles) => {
       this.setState({
@@ -13,6 +14,16 @@ class Saved extends Component {
       })
     })
   }
+
+  componentDidMount() {
+    console.log("saved page loaded");
+    API.getSaved().then((savedArticles) => {
+      this.setState({
+        articles: savedArticles.data
+      })
+    })
+  }
+
 
   getSaved = () => {
     API.getSaved().then((savedArticles) => {
