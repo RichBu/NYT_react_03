@@ -9,6 +9,7 @@ const Article = (props) => {
   return (
     <div className="well well-lg">
       <h4>{props.title}</h4>
+      <p> THIS IS A TEST </p>
       <p>{props.date}</p>
       <a href={props.url} target="_blank"><button className="btn btn-default pull-right">View Article</button></a>
       <Router>

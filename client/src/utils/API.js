@@ -2,6 +2,7 @@ import axios from "axios";
 
 const BASEURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?&sort-newest";
 const APIKEY = "&apikey=c3cde688433943d2833192aeb0574e2a";
+//const APIKEY = "&apikey=f46b65166bf646ec99d0e27975102b42";
 
 export default {
   getArticles: (query) => {
@@ -13,6 +14,7 @@ export default {
   },
 
   saveArticle: (articleData) => {
+    debugger;
     return axios.post("/api/articles", articleData);
   },
 

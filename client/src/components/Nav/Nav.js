@@ -12,7 +12,7 @@ const Nav = () => (
       </div>
     </nav>
     <div className="jumbotron text-center">
-      <h1>The Times, brought to you by React.js</h1>
+      <h1>The NYT Search Function</h1>
       <h2>Search for and save articles of interest.</h2>
     </div>
   </div>
