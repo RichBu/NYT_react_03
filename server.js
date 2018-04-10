@@ -12,12 +12,11 @@ PORT = process.env.PORT || 3001;
 // Configuring body parser for AJAX request
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
-// Serving up static assets
-/*
+//for Heroku
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static("client/build"));
 };
-*/
+
 
 //allow the api to be accessed by other apps
 app.use(function(req, res, next) {
